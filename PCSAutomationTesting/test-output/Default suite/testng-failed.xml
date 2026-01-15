@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Tests.CartTest">
+        <methods>
+          <include name="removeItemAndCheckCartEmpty"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyItemAddedToCartAndProceedCheckout"/>
+          <include name="tryProceedingToCheckoutWithoutItem"/>
+        </methods>
+      </class> <!-- Tests.CartTest -->
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="emptyPasswordTest"/>
+          <include name="lockedOutUserTest"/>
+          <include name="emptyUsernameAndPasswordTest"/>
+          <include name="sqlInjectionAttemptTest"/>
+          <include name="setUp"/>
+          <include name="emptyUsernameTest"/>
+          <include name="tearDown"/>
+          <include name="whitespaceInUsernamePasswordTest"/>
+          <include name="invalidPasswordTest"/>
+          <include name="invalidUsernameTest"/>
+          <include name="longUsernamePasswordTest"/>
+          <include name="loginWithValidCredentials"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
+      <class name="Tests.CheckoutTest">
+        <methods>
+          <include name="completeCheckoutFlowSuccessfully"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="checkoutWithMissingUserDetails"/>
+        </methods>
+      </class> <!-- Tests.CheckoutTest -->
+      <class name="Tests.InventoryTest">
+        <methods>
+          <include name="addItemToCartTest"/>
+          <include name="setUp"/>
+          <include name="addItemThenVerifyButtonText"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Tests.InventoryTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
